@@ -1,3 +1,8 @@
+# Setup Instructions
+* First git clone this repository
+* cd into project folder created and do command "npm install"
+* Make sure required Rails API is cloned down and running too; follow instructions to set that up here: https://github.com/mellowmorgan/timothee-chalamet-api
+* npm run start the react frontend on port 3000 or wherever really, once you've got the api running on port 3001
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
