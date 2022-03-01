@@ -35,6 +35,7 @@ class Home extends React.Component {
     dispatch(makeRandomQuoteApiCall());
   }
 
+
   render() {
     
     const { photosReducer, quotesReducer } = this.props;
@@ -55,7 +56,7 @@ class Home extends React.Component {
         </React.Fragment>;
     }
     else if (photosReducer.isPhotoLoading || quotesReducer.isQuoteLoading) {
-
+    
       return <React.Fragment>Loading...</React.Fragment>;
     } else {
       return (

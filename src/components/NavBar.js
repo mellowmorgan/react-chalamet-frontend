@@ -1,4 +1,6 @@
 import React from 'react'
+import { Link } from "react-router-dom";
+
 const navStyle ={
   minHeight:"fit-content",
   padding: "15px",
@@ -25,11 +27,12 @@ function NavBar() {
   return (
     <React.Fragment>
       <nav style={navStyle}>
-        <div style={titleNavStyle}><h2 style={h2NavStyle}>timothee API</h2></div>
+        <div style={titleNavStyle}>
+        <Link style={{textDecoration:"none"}} to="/"><h2 style={h2NavStyle}>timothee API</h2></Link></div>
         <div style={rightDivNavStyle}>
-        <h5 style={h5NavStyle}>Quotes</h5>
-        <h5 style={h5NavStyle}>Photos</h5>
-        <h5 style={h5NavStyle}>Submit</h5>
+        <Link style={{textDecoration:"none"}} to="/quotes"><h5 style={h5NavStyle} href="">Quotes</h5></Link>
+        <Link style={{textDecoration:"none"}} to="/photos"><h5 style={h5NavStyle}>Photos</h5></Link>
+        <Link style={{textDecoration:"none"}} to="/submit"><h5 style={h5NavStyle}>Submit</h5></Link>
        
         </div>
        

@@ -1,24 +1,21 @@
 import React from 'react';
 import Home from './Home';
 import NavBar from './NavBar'
-import { BrowserRouter, Routes,Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Submit from './Submit'
 import Photos from './Photos'
 import Quotes from './Quotes'
 function App() {
   return (
-    <React.Fragment>
+     <Router>
       <NavBar />
-      <BrowserRouter>
     <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="quotes" element={<Quotes />} />
-      <Route path="photos" element={<Photos />} />
-      <Route path="submit" element={<Submit />} />
+      <Route exact path="/" element={<Home />} />
+      <Route exact path="/quotes" element={<Quotes />} />
+      <Route exact path="/photos" element={<Photos />} />
+      <Route exact path="/submit" element={<Submit />} />
     </Routes>
-  </BrowserRouter>,
-      
-    </React.Fragment>
+  </Router>
   );
 }
 
