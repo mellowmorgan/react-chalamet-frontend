@@ -1,9 +1,9 @@
-import * as c from './..actions/ActionTypes';
+import * as c from './../actions/ActionTypes';
 
 const initialState = {
-  isLoading: false,
+  isPhotoLoading: false,
   photos: null,
-  error:null,
+  photoError:null,
   randomPhoto: null
 }
 
@@ -11,31 +11,31 @@ export default (state=initialState, action) => {
   switch (action.type){
     case c.REQUEST_RANDOM_PHOTO:
       return Object.assign({}, state, {
-        isLoading: true
+        isPhotoLoading: true
       });
-    case c.REQUEST_RANDOM_PHOTO_SUCCESS:
+    case c.GET_RANDOM_PHOTO_SUCCESS:
       return Object.assign({}, state, {
-        isLoading:false,
+        isPhotoLoading:false,
         randomPhoto: action.randomPhoto
       });
-    case c.REQUEST_RANDOM_PHOTO_FAILURE:
+    case c.GET_RANDOM_PHOTO_FAILURE:
       return Object.assign({}, state, {
-        isLoading:false,
-        error: action.error
+        isPhotoLoading:false,
+        photoError: action.photoError
       });
     case c.REQUEST_PHOTOS:
     return Object.assign({}, state, {
-      isLoading:true
+      isPhotoLoading:true
     });
-    case c.REQUEST_PHOTOS_SUCCESS:
+    case c.GET_PHOTOS_SUCCESS:
     return Object.assign({}, state, {
-      isLoading:false,
+      isPhotoLoading:false,
       photos: action.photos
     });
-    case c.REQUEST_PHOTOS_FAILURE:
+    case c.GET_PHOTOS_FAILURE:
     return Object.assign({}, state, {
-      isLoading:false,
-      error: action.error
+      isPhotoLoading:false,
+      photoError: action.photoError
     });
     default:
       return state;
