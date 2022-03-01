@@ -16,6 +16,39 @@ function Submit(props) {
     const { dispatch } = props;
     dispatch(postPhotoApiCall(event.target.photo.value));
   }
+  if (props.photosReducer.photo){
+    return(
+      <React.Fragment>
+      <p>Photo successfully added!</p>
+       
+      </React.Fragment>
+    );
+  }
+  else if(props.quotesReducer.quote){
+    return(
+      <React.Fragment>
+      <p>Quote successfully added!</p>
+       
+      </React.Fragment>
+  );
+  }
+  else if(props.quotesReducer.photoError){
+    return(
+      <React.Fragment>
+      <p>There was an error adding the photo.</p>
+       
+      </React.Fragment>
+    );
+  }
+  else if(props.quotesReducer.quoteError){
+    return(
+      <React.Fragment>
+      <p>There was an error adding the quote.</p>
+       
+      </React.Fragment>
+    );
+  }
+  else{}
     return (
       <React.Fragment>
         <div>
