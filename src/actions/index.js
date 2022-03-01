@@ -54,6 +54,25 @@ export const getQuotesFailure = (quoteError) => ({
   type: c.GET_QUOTES_FAILURE,
   quoteError
 });
+export const postQuoteSuccess = (quote) => ({
+  type: c.POST_QUOTE_SUCCESS,
+  quote
+});
+
+export const postQuoteFailure = (quoteError) => ({
+  type: c.POST_QUOTE_FAILURE,
+  quoteError
+});
+
+export const postPhotoSuccess = (photo) => ({
+  type: c.POST_PHOTO_SUCCESS,
+  photo
+});
+
+export const postPhotoFailure = (photoError) => ({
+  type: c.POST_PHOTO_FAILURE,
+  photoError
+});
 
 export const makeRandomQuoteApiCall = () => {
   return dispatch => {
@@ -111,6 +130,32 @@ export const makeQuotesApiCall = () => {
         })
       .catch((quoteError) => {
         dispatch(getQuotesFailure(quoteError));
+      });
+  }
+}
+export const postQuoteApiCall = (quoteContent) => {
+  return dispatch => {
+    return fetch(`http://localhost:3001/quotes?content=${quoteContent}`)
+      .then(response => response.json())
+      .then(
+        (jsonifiedResponse) => {
+          dispatch(postQuoteSuccess(jsonifiedResponse));
+        })
+      .catch((quoteError) => {
+        dispatch(postQuoteFailure(quoteError));
+      });
+  }
+}
+export const postPhotoApiCall = (url) => {
+  return dispatch => {
+    return fetch(`http://localhost:3001/photos?file_path=${url}`)
+      .then(response => response.json())
+      .then(
+        (jsonifiedResponse) => {
+          dispatch(postPhotoSuccess(jsonifiedResponse));
+        })
+      .catch((photoError) => {
+        dispatch(postPhotoFailure(photoError));
       });
   }
 }

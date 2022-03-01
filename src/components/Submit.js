@@ -5,16 +5,15 @@ import {connect} from 'react-redux';
 function Submit(props) {
   const handleQuoteSubmit = (event) => {
     event.preventDefault();
-    alert(event.target.quote.value)
     const { dispatch } = props;
-    dispatch(postPhotoApiCall());
+    dispatch(postQuoteApiCall(event.target.quote.value));
   }
   const handlePhotoSubmit = (event) => {
     
     event.preventDefault();
     alert(event.target.photo.value)
     const { dispatch } = props;
-    dispatch(postPhotoApiCall());
+    dispatch(postPhotoApiCall(event.target.quote.value));
   }
       return (
         <React.Fragment>

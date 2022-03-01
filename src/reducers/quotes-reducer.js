@@ -3,6 +3,7 @@ import * as c from './../actions/ActionTypes';
 const initialState = {
   isQuoteLoading: false,
   quotes: null,
+  quote: null,
   quoteError:null,
   randomQuote: null
 }
@@ -37,6 +38,14 @@ export default (state=initialState, action) => {
      isQuoteLoading:false,
       quoteError: action.quoteError
     });
+    case c.POST_QUOTE_SUCCESS:
+      return Object.assign({}, state, {
+        quote: action.quote
+      });
+    case c.POST_QUOTE_FAILURE:
+      return Object.assign({}, state, {
+        quoteError: action.quoteError
+      });
     default:
       return state;
   }
