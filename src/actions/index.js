@@ -135,7 +135,7 @@ export const makeQuotesApiCall = () => {
 }
 export const postQuoteApiCall = (quoteContent) => {
   return dispatch => {
-    return fetch(`http://localhost:3001/quotes?content=${quoteContent}`)
+    return fetch(`http://localhost:3001/quotes?content=${quoteContent}`,{method:'POST'})
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -148,10 +148,11 @@ export const postQuoteApiCall = (quoteContent) => {
 }
 export const postPhotoApiCall = (url) => {
   return dispatch => {
-    return fetch(`http://localhost:3001/photos?file_path=${url}`)
+    return fetch(`http://localhost:3001/photos?file_path=${url}`, {method:'POST'})
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
+          console.log(jsonifiedResponse)
           dispatch(postPhotoSuccess(jsonifiedResponse));
         })
       .catch((photoError) => {
