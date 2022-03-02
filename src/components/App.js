@@ -6,9 +6,19 @@ import { BrowserRouter as Router, Routes,Route } from "react-router-dom";
 import Submit from './Submit'
 import Photos from './Photos'
 import Quotes from './Quotes'
+const contentContainer = {
+  minHeight: "calc(100vh - 34px)"
+}
+const footerPin = {
+  position: "relative",
+  left: "0",
+  bottom: "0"
+}
 function App() {
   return (
+  
      <Router>
+       <div style={contentContainer}>
       <NavBar onClick={() => window.location.reload()} />
     <Routes>
       <Route exact path="/" element={<Home />} />
@@ -16,7 +26,11 @@ function App() {
       <Route exact path="/photos" element={<Photos />} />
       <Route exact path="/submit" element={<Submit />} />
     </Routes>
+    </div>
+    <footer style={footerPin}>FOOTER</footer>
   </Router>
+  
+  
   );
 }
 
