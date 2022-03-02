@@ -65,7 +65,7 @@ class Home extends React.Component {
           
           <div style={letsGo}>
           <div>
-            <p style={{fontSize: "20px", fontWeight:"500"}}>{quotesReducer.randomQuote}</p>
+            <p style={{fontSize: "20px", fontWeight:"500"}}><q>{quotesReducer.randomQuote}</q></p>
           </div>
           <div style={photoHolder}>
             <img style={randomPhotoStyle} src={photosReducer.randomPhoto} alt="A random photo of Timothee Chalamet" />

@@ -56,7 +56,7 @@ function Quotes(props) {
               <p>Error: {props.message}</p>
               <div style={quotesStyle}>
               {props.quotesReducer?.quotes.map((quote)=>{
-                return <div style={quoteStyle}><p style={qStyle} key={quote.content}>{quote.content}</p></div> 
+                return <div style={quoteStyle}><q style={qStyle}  key={quote.content}>{quote.content}</q></div> 
               })}
                 
               </div>
@@ -68,7 +68,7 @@ function Quotes(props) {
     <React.Fragment>
           <div style={quotesStyle}>
           {props.quotesReducer?.quotes.map((quote)=>{
-            return <div style={quoteStyle}><p style={qStyle} key={quote.content}>{quote.content}</p></div> 
+            return <div style={quoteStyle}><q style={qStyle}  key={quote.content}>{quote.content}</q></div> 
           })}
             
           </div>

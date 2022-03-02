@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 
 const navStyle ={
   minHeight:"fit-content",
-  padding: "15px",
+  padding: "25px",
   background: "black",
   overflow:"hidden",
+  boxShadow: "0 3px 2px -2px rgba(0,0,0,.2)"
 }
 const titleNavStyle={
   overflow:"hidden",
