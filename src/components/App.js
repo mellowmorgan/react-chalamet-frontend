@@ -27,7 +27,7 @@ function App() {
   
      <Router>
        <div style={contentContainer}>
-      <NavBar onClick={() => window.location.reload()} />
+      <NavBar  />
     <Routes>
       <Route exact path="/" element={<Home />} />
       <Route exact path="/quotes" element={<Quotes />} />

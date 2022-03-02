@@ -33,7 +33,7 @@ function NavBar() {
         <div style={rightDivNavStyle}>
         <Link style={{textDecoration:"none"}} to="/quotes"><h5 style={h5NavStyle} href="">Quotes</h5></Link>
         <Link style={{textDecoration:"none"}} to="/photos"><h5 style={h5NavStyle}>Photos</h5></Link>
-        <Link style={{textDecoration:"none"}} to="/submit"><h5 style={h5NavStyle}>Submit</h5></Link>
+        <Link style={{textDecoration:"none"}} to="/submit" ><h5 style={h5NavStyle}>Submit</h5></Link>
        
         </div>
        

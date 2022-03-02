@@ -6,6 +6,9 @@ const quotesStyle={
   width:"50%",
   margin:"50px auto"
 }
+const messageSpacing = {
+  padding: "20px"
+}
 const qStyle={
   fontSize:"20px",
   marginBottom:"0",
@@ -28,7 +31,7 @@ function Quotes(props) {
   if (props.quotesReducer.quoteError){
     return (
       <React.Fragment>
-        <div>
+        <div style={messageSpacing}>
           <p>{props.quotesReducer.quoteError.message}</p>
         </div>
        
@@ -53,7 +56,10 @@ function Quotes(props) {
     if (props.message){
       return(
         <React.Fragment>
-              <p>Error: {props.message}</p>
+          <div style={messageSpacing}>
+          <p>Error: {props.message}</p>
+          </div>
+              
               <div style={quotesStyle}>
               {props.quotesReducer?.quotes.map((quote)=>{
                 return <div style={quoteStyle}><q style={qStyle}  key={quote.content}>{quote.content}</q></div> 

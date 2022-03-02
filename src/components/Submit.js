@@ -10,6 +10,9 @@ const formStyle={
   marginLeft:"auto",
   marginRight:"auto"
 }
+const messageSpacing = {
+  padding: "20px"
+}
 const borderBetween = {
   border:"1.25px solid",
   width:"490px",
@@ -57,12 +60,36 @@ function Submit(props) {
     event.preventDefault();
     const { dispatch } = props;
     dispatch(postQuoteApiCall(event.target.quote.value));
+  
+    //  if ((props.quotesReducer.quote && props.quotesReducer.quote.message)|| (props.quotesReducer.quoteError)){
+    //   setTimeout(() => {
+    //     window.location.reload(false);
+    //   }, 3000);
+    // }
+    // else if (props.quotesReducer.quote){
+    //   setTimeout(() => {
+    //     navigate('/quotes')
+    //     window.location.reload(false);
+    //   }, 3000);
+    // }
   }
 
   const handlePhotoSubmit = (event) => {
     event.preventDefault();
     const { dispatch } = props;
     dispatch(postPhotoApiCall(event.target.photo.value));
+    // if ((props.photosReducer.photo && props.photosReducer.photo.message) || (props.photosReducer.photoError)){
+    //   setTimeout(() => {
+    //     window.location.reload(false);
+    //   }, 3000);
+    // }
+    // else if (props.photosReducer.photo){
+    //   setTimeout(() => {
+    //     navigate('/photos')
+    //     window.location.reload(false);
+    //   }, 3000);
+
+    // }
   }
 
 
@@ -70,13 +97,15 @@ function Submit(props) {
     if (props.photosReducer.photo.message){
       return(
         <React.Fragment>
-        <p>Error uploading photo:{props.photosReducer.photo.message}</p>
+          <div style={messageSpacing}>
+        <p>Error uploading photo:{props.photosReducer.photo.message}</p></div>
          
         </React.Fragment>
       );
     }else{return(
       <React.Fragment>
-      <p>Photo successfully added!</p>
+        <div style={messageSpacing}>
+      <p>Photo successfully added!</p></div>
        
       </React.Fragment>
     );}
@@ -87,33 +116,19 @@ function Submit(props) {
     if(props.quotesReducer.quote.message){
       return(
         <React.Fragment>
-        <p>Error uploading quote: {props.quotesReducer.quote.message}</p>
+          <div style={messageSpacing}>
+        <p>Error uploading quote: {props.quotesReducer.quote.message}</p></div>
          
         </React.Fragment>
     );
     }else{return(
       <React.Fragment>
-      <p>Quote successfully added!</p>
+        <div style={messageSpacing}>
+      <p>Quote successfully added!</p></div>
        
       </React.Fragment>
   );}
     
-  }
-  else if(props.quotesReducer.photoError){
-    return(
-      <React.Fragment>
-      <p>There was an error adding the photo.</p>
-       
-      </React.Fragment>
-    );
-  }
-  else if(props.quotesReducer.quoteError){
-    return(
-      <React.Fragment>
-      <p>There was an error adding the quote.</p>
-       
-      </React.Fragment>
-    );
   }
   else{
     return (

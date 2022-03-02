@@ -6,6 +6,9 @@ const randomPhotoStyle = {
   maxWidth:"100%",
  
 }
+const messageSpacing = {
+  padding: "20px"
+}
 const photoHolder = {
   margin:"auto",
   textAlign: "center",
@@ -42,18 +45,24 @@ class Home extends React.Component {
     const { photosReducer, quotesReducer } = this.props;
     if (photosReducer.photoError && quotesReducer.quoteError) {
       return <React.Fragment>
+        <div style={messageSpacing}>
         <p>Error getting photo: {photosReducer.photoError.message}</p>
         <p>Error getting quote: {quotesReducer.quoteError.message}</p>
+        </div>
         </React.Fragment>;
     }
     else if (photosReducer.photoError) {
       return <React.Fragment>
+        <div style={messageSpacing}>
         <p>Error getting photo: {photosReducer.photoError.message}</p>
+        </div>
         </React.Fragment>;
     }
     else if (quotesReducer.quoteError) {
       return <React.Fragment>
+        <div style={messageSpacing}>
         <p>Error getting quote: {quotesReducer.quoteError.message}</p>
+        </div>
         </React.Fragment>;
     }
     else if (photosReducer.isPhotoLoading || quotesReducer.isQuoteLoading) {

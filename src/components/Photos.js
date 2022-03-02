@@ -8,6 +8,9 @@ const photoDivStyle={
   marginTop: "50px",
   textAlign: "center"
 }
+const messageSpacing = {
+  padding: "20px"
+}
 function Photos(props) {
   useEffect(() => {
     const { dispatch } = props;
@@ -27,7 +30,7 @@ function Photos(props) {
   else if (props.photosReducer.photoError){
     return (
       <React.Fragment>
-        <div>
+        <div style={messageSpacing}>
           <p>{props.photosReducer.photoError.message}</p>
         </div>
        
@@ -42,7 +45,9 @@ function Photos(props) {
     if (props.message){
       return(
         <React.Fragment>
+          <div style={messageSpacing}>
           <p>Error: {props.message}</p>
+          </div>
               <div style={photoDivStyle}>
               {props.photosReducer.photos.map((photo)=>{
           return <img style={{maxWidth:"100%", marginBottom:"20px"}} src={photo.file_path}/>
