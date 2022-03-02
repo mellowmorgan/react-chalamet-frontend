@@ -1,11 +1,12 @@
 import React, {useState,  useEffect} from 'react';
 import { connect } from 'react-redux';
 import { makePhotosApiCall } from './../actions';
-
+import PropTypes from "prop-types";
 const photoDivStyle={
   width: "50%",
   margin:"auto",
-  marginTop: "50px"
+  marginTop: "50px",
+  textAlign: "center"
 }
 function Photos(props) {
   useEffect(() => {
@@ -38,6 +39,20 @@ function Photos(props) {
     return (<p>Loading...</p>);
   }
   else{
+    if (props.message){
+      return(
+        <React.Fragment>
+          <p>Error: {props.message}</p>
+              <div style={photoDivStyle}>
+              {props.photosReducer.photos.map((photo)=>{
+          return <img style={{maxWidth:"100%", marginBottom:"20px"}} src={photo.file_path}/>
+        })}
+                
+              </div>
+             
+            </React.Fragment>
+        ); 
+    }
     return(
     <React.Fragment>
           <div style={photoDivStyle}>
@@ -53,7 +68,9 @@ function Photos(props) {
     
 
 }
-
+Photos.propTypes = {
+  message: PropTypes.string
+}
 const mapStateToProps = state => {
   return {
    photosReducer: state.photosReducer

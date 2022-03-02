@@ -1,7 +1,7 @@
 import React, {useState,  useEffect} from 'react';
 import { connect } from 'react-redux';
 import { makeQuotesApiCall } from './../actions';
-
+import PropTypes from 'prop-types'
 const quotesStyle={
   width:"50%",
   margin:"50px auto"
@@ -50,6 +50,20 @@ function Quotes(props) {
     return (<p>Loading...</p>);
   }
   else{
+    if (props.message){
+      return(
+        <React.Fragment>
+              <p>Error: {props.message}</p>
+              <div style={quotesStyle}>
+              {props.quotesReducer?.quotes.map((quote)=>{
+                return <div style={quoteStyle}><p style={qStyle} key={quote.content}>{quote.content}</p></div> 
+              })}
+                
+              </div>
+             
+            </React.Fragment>
+        );
+    }
     return(
     <React.Fragment>
           <div style={quotesStyle}>
@@ -70,5 +84,8 @@ const mapStateToProps = state => {
   return {
    quotesReducer: state.quotesReducer
   }
+}
+Quotes.propTypes = {
+  message: PropTypes.string
 }
 export default connect(mapStateToProps)(Quotes);

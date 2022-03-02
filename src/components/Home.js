@@ -8,7 +8,8 @@ const randomPhotoStyle = {
 }
 const photoHolder = {
   margin:"auto",
-  textAlign: "center"
+  textAlign: "center",
+  marginBottom: "50px"
 }
 const letsGo= {
   width:"50%",
