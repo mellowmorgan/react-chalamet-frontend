@@ -87,6 +87,8 @@ function Photos(props) {
         })}
                 
               </div>
+              <div style={{width:"60%", margin:"30px auto",justifyContent:"space-between",display: "flex"}}>
+          <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>previousClick()}>Previous Page</Button> <h5>Page {page} of {chunkedArrayPhotos.length}</h5> <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>nextClick()}>Next Page</Button> </div>
              
             </React.Fragment>
         ); 
@@ -100,7 +102,7 @@ function Photos(props) {
             
           </div>
           <div style={{width:"60%", margin:"30px auto",justifyContent:"space-between",display: "flex"}}>
-          <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>previousClick()}>Previous Page</Button> <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>nextClick()}>Next Page</Button> </div>
+          <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>previousClick()}>Previous Page</Button> <h5>Page {page} of {chunkedArrayPhotos.length}</h5> <Button variant="dark" style={{fontWeight:"bold"}} onClick={()=>nextClick()}>Next Page</Button> </div>
         </React.Fragment>
       
     );
