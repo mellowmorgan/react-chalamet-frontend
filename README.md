@@ -1,10 +1,14 @@
-Thursday
-Heroku deploy api :)
+# Frontend to Timothee Chalamet API, using React
 
+By: Morgan Waites
+
+Resources:
 https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
 deploy to github pages
+- need to change api call to mirror url or deployed api
 
 # Setup Instructions
+
 * First git clone this repository
 * cd into project folder created and do command "npm install"
 * Make sure required Rails API is cloned down and running too; follow instructions to set that up here: https://github.com/mellowmorgan/timothee-chalamet-api

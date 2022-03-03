@@ -2,6 +2,9 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 import { makeRandomQuoteApiCall, makeRandomPhotoApiCall } from './../actions';
+
+const h3NavStyle={display:"inline", letterSpacing:"1px",color:"#808080",fontSize:"26px",fontWeight:"bolder",marginBottom:"0" }
+
 const randomPhotoStyle = {
   maxWidth:"100%",
  
@@ -72,7 +75,9 @@ class Home extends React.Component {
       return (
         <React.Fragment>
           
-          <div style={letsGo}>
+         <div style={{textAlign:"center",margin:"50px auto",width:"60%"}}><h3 style={h3NavStyle}>Welcome! Here's a random quote and photo of Timmy</h3></div>
+            
+            <div style={letsGo}>
           <div>
             <p style={{fontSize: "20px", fontWeight:"500"}}><q>{quotesReducer.randomQuote}</q></p>
           </div>
