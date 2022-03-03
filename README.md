@@ -1,3 +1,9 @@
+Thursday
+Heroku deploy api :)
+
+https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
+deploy to github pages
+
 # Setup Instructions
 * First git clone this repository
 * cd into project folder created and do command "npm install"
