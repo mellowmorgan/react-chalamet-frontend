@@ -77,7 +77,7 @@ export const postPhotoFailure = (photoError) => ({
 export const makeRandomQuoteApiCall = () => {
   return dispatch => {
     dispatch(requestRandomQuote);
-    return fetch(`http://localhost:3001/quotes/random`)
+    return fetch(`https://timothee-chalamet-api.herokuapp.com/quotes/random`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -92,7 +92,7 @@ export const makeRandomQuoteApiCall = () => {
 export const makeRandomPhotoApiCall = () => {
   return dispatch => {
     dispatch(requestRandomPhoto);
-    return fetch(`http://localhost:3001/photos/random`)
+    return fetch(`https://timothee-chalamet-api.herokuapp.com/photos/random`)
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -107,7 +107,7 @@ export const makeRandomPhotoApiCall = () => {
 export const makePhotosApiCall = () => {
   return dispatch => {
     dispatch(requestPhotos);
-    return fetch(`http://localhost:3001/photos`)
+    return fetch('https://timothee-chalamet-api.herokuapp.com/photos')
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -122,7 +122,7 @@ export const makePhotosApiCall = () => {
 export const makeQuotesApiCall = () => {
   return dispatch => {
     dispatch(requestQuotes);
-    return fetch(`http://localhost:3001/quotes`)
+    return fetch('https://timothee-chalamet-api.herokuapp.com/quotes')
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -135,7 +135,7 @@ export const makeQuotesApiCall = () => {
 }
 export const postQuoteApiCall = (quoteContent) => {
   return dispatch => {
-    return fetch(`http://localhost:3001/quotes?content=${quoteContent}`,{method:'POST'})
+    return fetch(`https://timothee-chalamet-api.herokuapp.com/quotes?content=${quoteContent}`,{method:'POST'})
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
@@ -148,7 +148,7 @@ export const postQuoteApiCall = (quoteContent) => {
 }
 export const postPhotoApiCall = (url) => {
   return dispatch => {
-    return fetch(`http://localhost:3001/photos?file_path=${url}`, {method:'POST'})
+    return fetch(`https://timothee-chalamet-api.herokuapp.com/photos?file_path=${url}`, {method:'POST'})
       .then(response => response.json())
       .then(
         (jsonifiedResponse) => {
