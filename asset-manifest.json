@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/chalamet-api/static/css/main.56e6221f.css",
-    "main.js": "/chalamet-api/static/js/main.61094f66.js",
-    "static/js/787.b81dc6dd.chunk.js": "/chalamet-api/static/js/787.b81dc6dd.chunk.js",
-    "index.html": "/chalamet-api/index.html",
-    "main.56e6221f.css.map": "/chalamet-api/static/css/main.56e6221f.css.map",
-    "main.61094f66.js.map": "/chalamet-api/static/js/main.61094f66.js.map",
-    "787.b81dc6dd.chunk.js.map": "/chalamet-api/static/js/787.b81dc6dd.chunk.js.map"
+    "main.css": "/react-chalamet-frontend/static/css/main.56e6221f.css",
+    "main.js": "/react-chalamet-frontend/static/js/main.37455ba3.js",
+    "static/js/787.b81dc6dd.chunk.js": "/react-chalamet-frontend/static/js/787.b81dc6dd.chunk.js",
+    "index.html": "/react-chalamet-frontend/index.html",
+    "main.56e6221f.css.map": "/react-chalamet-frontend/static/css/main.56e6221f.css.map",
+    "main.37455ba3.js.map": "/react-chalamet-frontend/static/js/main.37455ba3.js.map",
+    "787.b81dc6dd.chunk.js.map": "/react-chalamet-frontend/static/js/787.b81dc6dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56e6221f.css",
-    "static/js/main.61094f66.js"
+    "static/js/main.37455ba3.js"
   ]
 }
