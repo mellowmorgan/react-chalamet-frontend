@@ -29,10 +29,10 @@ function App() {
        <div style={contentContainer}>
       <NavBar  />
     <Routes>
-      <Route exact path="/" element={<Home />} />
-      <Route exact path="/quotes" element={<Quotes />} />
-      <Route exact path="/photos" element={<Photos />} />
-      <Route exact path="/submit" element={<Submit />} />
+      <Route exact path={process.env.PUBLIC_URL + '/'} element={<Home />} />
+      <Route exact path={process.env.PUBLIC_URL +'/quotes'} element={<Quotes />} />
+      <Route exact path={process.env.PUBLIC_URL +' /photos'} element={<Photos />} />
+      <Route exact path={process.env.PUBLIC_URL +' /submit'} element={<Submit />} />
     </Routes>
     </div>
     <footer style={footerPin}><h5 style={h5NavStyle}>Copyright 2022 Morgan Waites</h5><a href="https://github.com/mellowmorgan/react-chalamet-frontend"><h5 style={h5NavStyle}>GitHub</h5></a></footer>
