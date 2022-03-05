@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import { BrowserRouter } from 'react-router-dom';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 import rootReducer from './reducers/index';
@@ -11,9 +12,11 @@ import middlewareLogger from './middleware/middleware-logger';
 import 'bootstrap/dist/css/bootstrap.min.css';
 const store = createStore(rootReducer, applyMiddleware(thunkMiddleware, middlewareLogger));
 ReactDOM.render(
+  
   <Provider store={store}>
     <App />
     </Provider>,
+
   document.getElementById('root')
 );
 

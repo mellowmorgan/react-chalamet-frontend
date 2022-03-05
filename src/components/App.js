@@ -2,11 +2,11 @@ import React from 'react';
 import Home from './Home';
 import NavBar from './NavBar'
 import { Redirect } from "react-router-dom";
-import { HashRouter as Router, Routes,Route } from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Submit from './Submit'
 import Photos from './Photos'
 import Quotes from './Quotes'
-import { isLabelWithInternallyDisabledControl } from '@testing-library/user-event/dist/utils';
+
 const contentContainer = {
   minHeight: "calc(100vh - 34px)",
   paddingBottom: "50px"
@@ -29,10 +29,10 @@ function App() {
        <div style={contentContainer}>
       <NavBar  />
     <Routes>
-      <Route exact path={process.env.PUBLIC_URL + '/'} element={<Home />} />
-      <Route exact path={process.env.PUBLIC_URL +'/quotes'} element={<Quotes />} />
-      <Route exact path={process.env.PUBLIC_URL +' /photos'} element={<Photos />} />
-      <Route exact path={process.env.PUBLIC_URL +' /submit'} element={<Submit />} />
+      <Route exact path='/' element={<Home />} />
+      <Route path='/quotes' element={<Quotes />} />
+      <Route path='/photos' element={<Photos />} />
+      <Route path='/submit' element={<Submit />} />
     </Routes>
     </div>
     <footer style={footerPin}><h5 style={h5NavStyle}>Copyright 2022 Morgan Waites</h5><a href="https://github.com/mellowmorgan/react-chalamet-frontend"><h5 style={h5NavStyle}>GitHub</h5></a></footer>
