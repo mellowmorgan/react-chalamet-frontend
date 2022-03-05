@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-chalamet-frontend/static/css/main.56e6221f.css",
-    "main.js": "/react-chalamet-frontend/static/js/main.f1ce7d21.js",
+    "main.js": "/react-chalamet-frontend/static/js/main.3ad0861a.js",
     "static/js/787.b81dc6dd.chunk.js": "/react-chalamet-frontend/static/js/787.b81dc6dd.chunk.js",
     "index.html": "/react-chalamet-frontend/index.html",
     "main.56e6221f.css.map": "/react-chalamet-frontend/static/css/main.56e6221f.css.map",
-    "main.f1ce7d21.js.map": "/react-chalamet-frontend/static/js/main.f1ce7d21.js.map",
+    "main.3ad0861a.js.map": "/react-chalamet-frontend/static/js/main.3ad0861a.js.map",
     "787.b81dc6dd.chunk.js.map": "/react-chalamet-frontend/static/js/787.b81dc6dd.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.56e6221f.css",
-    "static/js/main.f1ce7d21.js"
+    "static/js/main.3ad0861a.js"
   ]
 }
