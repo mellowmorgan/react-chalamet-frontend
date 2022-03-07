@@ -2,17 +2,24 @@
 
 By: Morgan Waites
 
-Resources:
-https://dev.to/yuribenjamin/how-to-deploy-react-app-in-github-pages-2a1f
-deploy to github pages
-- need to change api call to mirror url or deployed api
+## Technologies Used
 
-# Setup Instructions
+* React
+* Router
+* Redux
+* Bootstrap
+* Netlify
+
+## Description
+
+* A frontend for Timothee Chalamet API, repo here. Show quotes and photos of Timothee and allows user to upload pics and quotes too. See it hosted with Netlify [here](https://chalamet-api.netlify.app/).
+
+## Setup Instructions
 
 * First git clone this repository
 * cd into project folder created and do command "npm install"
-* Make sure required Rails API is cloned down and running too; follow instructions to set that up here: https://github.com/mellowmorgan/timothee-chalamet-api
-* npm run start the react frontend on port 3000 or wherever really, once you've got the api running on port 3001
+* npm run start to run server in browser at localhost:3000.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
