@@ -12,7 +12,7 @@ By: Morgan Waites
 
 ## Description
 
-* A frontend for Timothee Chalamet API, repo here. Show quotes and photos of Timothee and allows user to upload pics and quotes too. See it hosted with Netlify [here](https://chalamet-api.netlify.app/).
+* A frontend for Timothee Chalamet API, repo [here](https://github.com/mellowmorgan/timothee-chalamet-api). Show quotes and photos of Timothee and allows user to upload pics and quotes too. See it hosted with Netlify [here](https://chalamet-api.netlify.app/).
 
 ## Setup Instructions
 
